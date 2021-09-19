@@ -1,0 +1,49 @@
+% SSCommon.tex
+% Copyright (c) Sergey Strukov. All rights reserved. This is a public document. You can freely distribute and use it, providing the authorship and the copyright note is unchanged.
+
+\documentclass[12pt,fleqn,leqno]{article}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathbbol}
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows.meta}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+%-----------------------------------------------------------------
+
+\def\VSpace{\vskip 20pt}
+
+\def\vspace{\vskip 10pt}
+
+\def\SSCopyright{ Copyright~\copyright~Sergey~Strukov. All rights reserved. This is a public document. You can freely distribute and use it, providing the authorship and the copyright note is unchanged. }
+
+\def\SSCover{ \author{ Sergey Strukov } \title{Modern mathematics series} \maketitle{\SSCopyright} \vskip 30pt }
+
+\def\SStitle#1{ \centerline{\underline{ \it \LARGE #1. }} \VSpace }
+
+\newcounter{Nbullet}
+
+\def\SSbullet{ \stepcounter{Nbullet} \centerline{\underline{ n.\arabic{Nbullet} }} }
+
+\newcounter{Nsect}[Nbullet]
+
+\def\SSsect{ \vspace \stepcounter{Nsect} { \arabic{Nsect}) } }
+
+%-----------------------------------------------------------------
+
+\def\xZ{ \mathbb{Z} }
+\def\xR{ \mathbb{R} }
+\def\xC{ \mathbb{C} }
+\def\xT{ \mathbb{T} }
+
+\def\xe{ \mathbb{e} }
+\def\xF{ \mathbb{Z}/(p) }
+\def\xSign{ \left\lbrace~\pm~\right\rbrace }
+
+\def\SSet#1#2{ \left\lbrace~ #1 ~|~ #2 ~\right\rbrace }
+
+%-----------------------------------------------------------------

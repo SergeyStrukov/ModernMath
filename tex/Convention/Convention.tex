@@ -1,0 +1,59 @@
+% Convention.tex
+% Copyright (c) Sergey Strukov. All rights reserved. This is a public document. You can freely distribute and use it, providing the authorship and the copyright note is unchanged.
+
+\input ../SSCommon.tex
+
+\begin{document}
+\selectlanguage{russian}
+
+\SSCover
+
+\SStitle{Удобства}
+
+\SSbullet
+
+\SSsect Многие математические объекты есть множества с дополнительными структурами.
+Довольно часто, в этих структурах есть один выделенный элемент базового множества. 
+Например, если \( G \) --- группа, то этот выделенный элемент --- единица группы. 
+В таком случае удобно символом \( G^\circ \) обозначать базовое множество с выколотым выделенным элементом.
+Например, \( \xZ^\circ \) --- множество ненулевых целых чисел.
+
+\SSsect Несколько полезных определений:
+\[ \xR_+ := \SSet{ t \in \xR }{ t>0 } \]
+\[ \xR_- := \SSet{ t \in \xR }{ t<0 } \]
+\[ \xZ_+ := \SSet{ t \in \xZ }{ t>0 } \]
+\[ \xZ_- := \SSet{ t \in \xZ }{ t<0 } \]
+
+\SSsect Если \( p \) --- простое число, то \( \xF \) --- простое (конечное) поле из \( p \) элементов.
+
+\SSsect \( \xSign \) --- группа знаков, стандартная группа второго порядка.
+
+\SSsect Одномерный тор: 
+\[ \xT := \SSet{ z \in \xC }{ |z|=1 } \]
+
+Одна из важнейших топологических групп во всей математике.
+
+\SSsect Стандартная комплексная синусоида:
+\[ \xe(t) = e^{2 \pi i t} ~,~ t \in \xR \]
+
+\SSsect Основные свойства \( \xe(t) \)~:
+\[
+\xe(t+t') = \xe(t) \cdot \xe(t')
+\]
+\[
+\xe(kt) = \xe(t)^k
+\]
+\[
+\xe(t+1) = \xe(t)
+\]
+\[
+|\xe(t)| = 1
+\]
+\[
+\xe(-t) = \xe(t)^{-1} = \overline{\xe(t)}
+\]
+
+\SSsect В силу периодичности, \( \xe(t) \) может быть определена для аргумента \( t \) из \( \xR/\xZ \). 
+Фактически, \( \xe(t) : \xR/\xZ \simeq \xT \).
+
+\end{document}

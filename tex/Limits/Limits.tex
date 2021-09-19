@@ -1,2 +1,34 @@
 % Limits.tex
 % Copyright (c) Sergey Strukov. All rights reserved. This is a public document. You can freely distribute and use it, providing the authorship and the copyright note is unchanged.
+
+\input ../SSCommon.tex
+
+\begin{document}
+\selectlanguage{russian}
+    
+\SScover
+    
+\SStitle{Пределы}
+
+Исторически, теория пределов возникла как часть анализа. Однако, после появления топологии она в обобщённой форме стала естественной частью её. 
+В этой статье теория пределов излагается в законченной геометрической форме. 
+Кратко говоря, предел --- это продолжение функции по непрерывности на специальных топологических пространствах --- \underline{фильтрах}. 
+Подобная конструкция делает большинство свойств пределов наглядно очевидными.
+    
+\SSbullet 
+
+\SSsect Пусть \( F \) --- топологическое пространство. \( F \) называется \underline{фильтром}, если все точки \( F \), кроме одной, открыты. 
+Такая точка, тавтологически, определена однозначно. 
+Будем обозначать её \( \infty_F \). 
+Следуя общему правилу, положим \( F^\circ := F\backslash\{\infty_F\} \).
+
+\SSsect Пусть \( F \) --- \underline{фильтр}. Тогда справедливы следующие утверждения:
+\begin{itemize}[label=]
+\item \( F^\circ \) открыто, но не замкнуто
+\item \( F^\circ \) дискретно
+\item \( \overline{F^\circ} = F ~,~ F^\circ\neq\varnothing \)
+\item \( \infty_F \) замкнута
+\item \( F \) недискретно
+\end{itemize}
+
+\end{document}

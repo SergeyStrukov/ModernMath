@@ -3,6 +3,12 @@
 
 \documentclass[12pt,fleqn,leqno]{article}
 
+\oddsidemargin=-1cm
+\textwidth=19cm 
+
+\topmargin=-2cm
+\textheight=640pt
+
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsmath}
@@ -32,7 +38,10 @@
 
 \newcounter{Nsect}[Nbullet]
 
-\def\SSsect{ \vspace \stepcounter{Nsect} { \arabic{Nsect}) } }
+\newcommand{\SSsect}[1][]{ \vspace \stepcounter{Nsect} \( \arabic{Nsect})^{#1} \) }
+
+\def\SSproof{\textit{\underline{Proof.}}}
+\def\SSendp{-------------------------------------}
 
 %-----------------------------------------------------------------
 
@@ -46,5 +55,7 @@
 \def\xSign{ \left\lbrace~\pm~\right\rbrace }
 
 \def\SSet#1#2{ \left\lbrace~ #1 ~|~ #2 ~\right\rbrace }
+
+\def\SSDiag[#1]{\matrix (#1) [ matrix of math nodes, row sep = 2em, column sep = 2em ]}
 
 %-----------------------------------------------------------------

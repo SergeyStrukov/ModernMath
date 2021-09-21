@@ -10,25 +10,141 @@
     
 \SStitle{Пределы}
 
-Исторически, теория пределов возникла как часть анализа. Однако, после появления топологии она в обобщённой форме стала естественной частью её. 
+Исторически, теория пределов возникла как часть анализа. 
+Однако, после появления топологии она в обобщённой форме стала естественной частью топологии. 
 В этой статье теория пределов излагается в законченной геометрической форме. 
-Кратко говоря, предел --- это продолжение функции по непрерывности на специальных топологических пространствах --- \underline{фильтрах}. 
-Подобная конструкция делает большинство свойств пределов наглядно очевидными.
+Кратко говоря, предел --- это продолжение функции по непрерывности на специальных топологических пространствах --- \mbox{\textbf{фильтрах}}. 
+Подобная конструкция делает большинство свойств пределов \textit{наглядно очевидными}.
+
+\vspace
     
 \SSbullet 
 
-\SSsect Пусть \( F \) --- топологическое пространство. \( F \) называется \underline{фильтром}, если все точки \( F \), кроме одной, открыты. 
+\SSsect[def] Пусть \( F \) --- топологическое пространство. 
+\( F \) называется \underline{фильтром}, если все точки \( F \), кроме одной, открыты. 
 Такая точка, тавтологически, определена однозначно. 
 Будем обозначать её \( \infty_F \). 
 Следуя общему правилу, положим \( F^\circ := F\backslash\{\infty_F\} \).
 
-\SSsect Пусть \( F \) --- \underline{фильтр}. Тогда справедливы следующие утверждения:
+\SSsect Пусть \( F \) --- \underline{фильтр}. 
+
+Тогда справедливы следующие утверждения:
 \begin{itemize}[label=]
-\item \( F^\circ \) открыто, но не замкнуто
-\item \( F^\circ \) дискретно
-\item \( \overline{F^\circ} = F ~,~ F^\circ\neq\varnothing \)
-\item \( \infty_F \) замкнута
-\item \( F \) недискретно
+\item \( F^\circ \) открыто, но не замкнуто,
+\item \( F^\circ \) дискретно,
+\item \( \overline{F^\circ} = F ~,~ F^\circ\neq\varnothing \) ,
+\item \( \infty_F \) замкнута,
+\item \( F \) недискретно.
 \end{itemize}
+
+\SSsect[def] Пусть \( F \) --- фильтр, \( X \) --- топологическое пространство, 
+\mbox{\( f: F^\circ \rightarrow X \) --- отображение}. 
+
+Тогда \( f \) непрерывно.
+
+Пусть \( x \in X \), \( g \) --- продолжение \( f \) на \( F \), такое, что \( g(\infty_F) = x \) .
+
+Если \( g \) непрерывно, то будем говорить, что \( \displaystyle x = \lim_{F} f\) .
+
+\begin{tikzpicture}
+\SSDiag[M]
+{ 
+    F^\circ & F & \infty_F & g(\infty_F) = x \\
+    & X \\
+};
+\path
+(M-1-1) edge [->] node [above] {\(\subset\)} (M-1-2)
+(M-1-1) edge [->] node [left] {\(f\)} (M-2-2)
+(M-1-2) edge [->,dashed] node [right] {\(g\)} (M-2-2)
+(M-1-3) edge [->] (M-1-2) 
+(M-1-3) edge [->] node [right] {\(x\)} (M-2-2) ;
+\end{tikzpicture}
+
+\SSsect Пусть \( F \) --- фильтр, \( p: X \rightarrow Y \) --- непрерывное отображение топологических пространств, \( f: F^\circ \rightarrow X \) --- отображение.
+
+Тогда \( \displaystyle x = \lim_{F} f ~\Rightarrow~ \displaystyle p(x) = \lim_{F} p\circ f \) .
+
+\SSsect Пусть \( F \) --- фильтр, \( X \) --- топологическое пространство, \( \left\lbrace Y_i \right\rbrace_{i \in I} \) --- семейство топологических пространств, \( \left\lbrace p_i : X \rightarrow Y_i \right\rbrace_{i \in I} \) --- семейство непрерывных отображений. 
+Пусть топология \( X \) порождена семейством \( \left\lbrace p_i \right\rbrace_{i \in I} \) . 
+Пусть \(  f: F^\circ \rightarrow X ~,~ x \in X \) .
+
+Тогда, \( \displaystyle x = \lim_{F} f ~\Leftrightarrow~ \forall~i \in I~ p_i(x) = \lim_{F} p_i \circ f \) . 
+
+\SSsect Пусть \( F \) --- фильтр, \( X \) --- топологическое пространство, 
+\( f: F^\circ \rightarrow X \) --- отображение.
+
+Пусть \( A \subset X \) замкнуто.
+
+Если \( f\left( F^\circ \right) \subset A ~,~ \displaystyle x = \lim_{F} f \) , то \( x \in A \) .
+
+\SSproof
+
+Пусть \( g \) --- непрерывное продолжение \( f \), такое, что \( g(\infty_F) = x \) .
+
+Тогда \( x \in g(F) = g(\overline{F^\circ}) \subset \overline{g(F^\circ)} = \overline{f(F^\circ)} \subset \overline{A} = A \) .
+
+Тоже самое по-другому: \( F^\circ \subset g^{-1}(A) ~\Rightarrow~ \overline{F^\circ} \subset g^{-1}(A) ~\Rightarrow~ \infty_F \in g^{-1}(A) ~\Rightarrow~ x \in A \) . 
+
+\SSendp
+
+\SSsect[!!!] Пусть \( F \) --- фильтр, \( X \) --- \textbf{хаусдорфово} топологическое пространство, \( f: F^\circ \rightarrow X \) .
+
+Тогда \( \exists \) не более одного предела \( \displaystyle x = \lim_{F} f \) .
+
+Почему у этого пункта аж три восклицательных знака? 
+Причина в том, что в математике очень часто пределы в хаусдорфовы пространства используются для \textbf{построения} объектов. 
+Например: производная, интеграл, сумма ряда и.т.п. 
+Для этого нужна единственность, обеспеченная этим свойством.
+
+\SSproof
+
+Пусть \( \displaystyle x,y = \lim_{F} f \) . 
+Тогда \( \displaystyle (x,y) = \lim_{F}~(f,f) \) , но \( (f,f) : F^\circ \rightarrow X \times X \) отображает \( F^\circ \) в диагональ \( \Delta_X \subset X \times X \), которая, в силу хаусдорфовости, замкнута в \( X \times X \). 
+Значит, \( (x,y) \in \Delta_X \) , т.е. \( x=y \) .
+
+\SSendp
+
+\pagebreak
+
+\SSbullet 
+
+\SSsect[def] Пусть \( F \) и \( G \) --- два фильтра. 
+\( \tau : F \rightarrow G \) --- \underline{морфизм фильтров}, если \( \tau \) --- непрерывное отображение и \( \tau^{-1}(\infty_G)=\{\infty_F\} \).
+
+Фильтры и их морфизмы образуют категорию.
+
+\SSsect Пусть \( F \) и \( G \) --- два фильтра. Если \( \tau : F \rightarrow G \) (морфизм фильтров), то:
+\begin{itemize}[label=]
+\item \( \tau(F^\circ) \subset G^\circ \) ,
+\item \( \tau(\infty_F)=\infty_G \) , 
+\item \( \tau^\circ: F^\circ \rightarrow G^\circ \) --- отображение, индуцированное \( \tau \) .
+\end{itemize}
+
+\SSsect Пусть \( F \) и \( G \) --- два фильтра.
+Пусть \( \tau^\circ: F^\circ \rightarrow G^\circ \) --- отображение. 
+Тогда \(  \tau^\circ \) может быть продолжено до морфизма фильтров \( \tau : F \rightarrow G \) (очевидно, единственным образом) \( \Leftrightarrow~ \displaystyle \infty_G = \lim_{F} \tau^\circ \) .
+
+\SSsect Пусть \( F \) и \( G \) --- два фильтра, \( X \) --- топологическое пространство, \( \tau : F \rightarrow G \) , \( f:G^\circ \rightarrow X \) .
+
+Тогда если \( \displaystyle x = \lim_{G} f \) , то \( \displaystyle x = \lim_{F} f\circ \tau^\circ \) .
+
+\pagebreak
+
+\SSbullet 
+
+\SSsect Пусть \( G \) --- фильтр, \( F \) --- топологическое пространство, \( \tau : F \rightarrow G \) --- непрерывное инъективное отображение.
+
+Тогда \( F \) дискретно \( \Leftrightarrow~ \tau^{-1}(\infty_G) \) открыто.
+
+Если \( F \) недискретно, то \( F \) --- фильтр и \( \tau \) --- морфизм фильтров. 
+
+\SSproof
+
+\SSendp
+
+\SSsect
+\SSsect
+\SSsect
+\SSsect
 
 \end{document}

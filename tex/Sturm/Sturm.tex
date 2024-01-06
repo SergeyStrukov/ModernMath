@@ -1,0 +1,54 @@
+% Sturm.tex
+% Copyright (c) Sergey Strukov. All rights reserved. This is a public document. You can freely distribute and use it, providing the authorship and the copyright note is unchanged.
+
+\input ../SSCommon.tex
+
+\begin{document}
+\selectlanguage{russian}
+    
+\SScover
+    
+\SStitle{Теорема Штурма}
+
+Теорема Штурма --- красивая элементарная теорема школьного уровня. Она позволяет найти число корней данного полинома с вещественными коэффициентами на заданном интервале.
+С её помощью можно локализовать корни вещественных полиномов и находить хорошие приближения к ним.
+
+\vspace
+
+\SSbullet 
+
+\begin{tikzpicture}
+    \draw[thick,->] (0,-2) -- (0,2) node[anchor=west] {\(y\)};
+    \draw[thick,->] (-2,0) -- (2,0) node[anchor=north] {\(x\)};
+    \draw (1,1) node[anchor=south west] {\(0\)};
+    \draw (1,-1) node[anchor=north west] {\(1\)};
+    \draw (-1,1) node[anchor=south east] {\(1\)};
+    \draw (-1,-1) node[anchor=north east] {\(0\)};
+\end{tikzpicture}
+
+\SSsect[def] Функция \( \sigma: \xR^* \times \xR^* \rightarrow \{0,1\} \) определена как
+\[ \sigma(x,y) = 
+   \begin{cases} 
+       1, & sign(x) = sign(y) \\ 
+       0, & sign(x) \neq sign(y)
+   \end{cases} 
+\]
+
+\SSsect \( \sigma(x,y) = \sigma(y,x) \)
+
+\SSsect \( \sigma(-x,y) = 1 - \sigma(x,y) \)
+
+\SSsect[def] \( \sigma(x_1,\dots,x_n) \) , \( x_1,\dots,x_n \in \xR^* \) , \( n \geqslant 1 \)
+\[ \sigma(x_1,\dots,x_n) = \sum_{k=1}^{n-1} \sigma(x_k,x_{k+1})
+\]
+--- число перемен знака (Ч.П.З.)
+
+\SSsect Индуктивно,
+\begin{itemize}[label=]
+\item \( \sigma(x_1) = 0 \) ,
+\item \( \sigma(x_1,\dots,x_n) = \sigma(x_1,x_2) + \sigma(x_2,\dots,x_n) \) , \( n \geqslant 2 \) .
+\end{itemize}
+        
+
+\end{document}
+

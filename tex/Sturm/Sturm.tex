@@ -18,8 +18,8 @@
 \SSbullet 
 
 \begin{tikzpicture}
-    \draw[thick,->] (0,-2) -- (0,2) node[anchor=west] {\(y\)};
-    \draw[thick,->] (-2,0) -- (2,0) node[anchor=north] {\(x\)};
+    \draw[thick,->] (0,-2) -- (0,2) node[anchor=north west] {\(y\)};
+    \draw[thick,->] (-2,0) -- (2,0) node[anchor=north west] {\(x\)};
     \draw (1,1) node[anchor=south west] {\(0\)};
     \draw (1,-1) node[anchor=north west] {\(1\)};
     \draw (-1,1) node[anchor=south east] {\(1\)};
@@ -48,7 +48,66 @@
 \item \( \sigma(x_1) = 0 \) ,
 \item \( \sigma(x_1,\dots,x_n) = \sigma(x_1,x_2) + \sigma(x_2,\dots,x_n) \) , \( n \geqslant 2 \) .
 \end{itemize}
-        
+
+\vspace
+
+\SSbullet
+
+В этом пункте \( f,g \in \xR[T] \) .
+
+\SSsect Пусть \( f \) и \( g \) не имеют общих вещественных корней. 
+Пусть \( a,b \in \xR \) , \( a < b \) .
+
+\SSsect Пусть \( a,b \) --- не корни \( f \) или \( g \) .
+Т.е. \( f(a),g(a),f(b),g(b) \in \xR^* \) .
+
+\SSsect[def] Определим \( \varphi(t) = \sigma(f(t),g(t)) \) , \( t \in \xR \) .
+Тогда \( \varphi \) определена вне (конечного) множества корней \( f \) или \( g \) ,
+например, в \( a \) и \( b \) .
+
+\SSsect Функция \( \varphi(t) \) локально постоянна. Это вытекает из непрерывности \( f(t) \) ,
+\( g(t) \) и локального постоянcтва \( \sigma(x,y) \) .
+
+\vspace
+\begin{tikzpicture}
+\draw[thick,->] (0,0) -- (6,0) node[anchor=north west] {\(t\)};    
+\draw (0.5,0.1) -- (0.5,-0.1) node[anchor=north] {\(a\)};
+\draw (5.5,0.1) -- (5.5,-0.1) node[anchor=north] {\(b\)};
+\draw[] (1.5,0) circle [radius=0.1];
+\draw[] (2.5,0) circle [radius=0.1];
+\draw[] (3.5,0) circle [radius=0.1];
+\draw[] (4.5,0) circle [radius=0.1];
+\end{tikzpicture}
+
+
+\SSsect[def] Определим \( \delta(t) = \varphi(t+0) - \varphi(t-0) \in \{-1,0,1\} \) --- 
+функция скачков \( \varphi \) .
+
+\SSsect \( \delta(t) = 0 \) вне корней \( f \) или \( g \) .
+
+\SSsect[!!] Главная теорема:
+\[ \varphi(b) - \varphi(a) = \sum_{ a<t<b \enspace \delta(t) \neq 0   } \delta(t) \] .
+
+\SSsect
+
+\SSsect
+
+\SSsect
+
+\SSsect
+
+\SSsect
+
+\SSsect
+
+\SSsect
+
+\vspace
+
+\SSbullet
+
+\SSbullet
+
 
 \end{document}
 

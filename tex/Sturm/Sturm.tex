@@ -27,7 +27,7 @@
 \end{tikzpicture}
 
 \SSsect[def] Функция \( \sigma: \xR^* \times \xR^* \rightarrow \{0,1\} \) определена как
-\[ \sigma(x,y) = 
+\[ \sigma(x,y) := 
    \begin{cases} 
        1, & sign(x) = sign(y) \\ 
        0, & sign(x) \neq sign(y)
@@ -39,7 +39,7 @@
 \SSsect \( \sigma(-x,y) = 1 - \sigma(x,y) \)
 
 \SSsect[def] \( \sigma(x_1,\dots,x_n) \) , \( x_1,\dots,x_n \in \xR^* \) , \( n \geqslant 1 \)
-\[ \sigma(x_1,\dots,x_n) = \sum_{k=1}^{n-1} \sigma(x_k,x_{k+1})
+\[ \sigma(x_1,\dots,x_n) := \sum_{k=1}^{n-1} \sigma(x_k,x_{k+1})
 \]
 --- число перемен знака (Ч.П.З.)
 
@@ -61,7 +61,7 @@
 \SSsect Пусть \( a,b \) --- не корни \( f \) или \( g \) .
 Т.е. \( f(a),g(a),f(b),g(b) \in \xR^* \) .
 
-\SSsect[def] Определим \( \varphi(t) = \sigma(f(t),g(t)) \) , \( t \in \xR \) .
+\SSsect[def] Определим \( \varphi(t) := \sigma(f(t),g(t)) \) , \( t \in \xR \) .
 Тогда \( \varphi \) определена вне (конечного) множества корней \( f \) или \( g \) ,
 например, в \( a \) и \( b \) .
 
@@ -80,27 +80,36 @@
 \end{tikzpicture}
 
 
-\SSsect[def] Определим \( \delta(t) = \varphi(t+0) - \varphi(t-0) \in \{-1,0,1\} \) --- 
+\SSsect[def] Определим \( \delta(t) := \varphi(t+0) - \varphi(t-0) \in \{-1,0,1\} \) --- 
 функция скачков \( \varphi \) .
 
 \SSsect \( \delta(t) = 0 \) вне корней \( f \) или \( g \) .
 
 \SSsect[!!] Главная теорема:
-\[ \varphi(b) - \varphi(a) = \sum_{ a<t<b \enspace \delta(t) \neq 0   } \delta(t) \] .
+\[ \varphi(b) - \varphi(a) = \sum_{ a<t<b \enspace \delta(t) \neq 0 } \delta(t) \]
 
-\SSsect
+\SSsect[def] Определим символ
+\[ \left( \frac{f}{g} \right)^b_a := \sum_{ a<t<b \enspace g(t)=0 } \delta(t) \]
 
-\SSsect
+\SSsect \( \varphi \) и \( \delta \) для пар \( (f,g) \) и \( (g,f) \) одинаковы.
 
-\SSsect
+\SSsect[!!] Закон взаимности:
+\[ \left( \frac{f}{g} \right)^b_a + \left( \frac{g}{f} \right)^b_a = \varphi(b)-\varphi(a) \]
 
-\SSsect
+\SSsect Если заменить \( f \) на \( -f \) , то \( \varphi \) превратиться в \( 1-\varphi \) , а \( \delta \) в \( -\delta \) .
 
-\SSsect
+\SSsect[!] Нечётность:
+\[ \left( \frac{-f}{g} \right)^b_a = - \left( \frac{f}{g} \right)^b_a \]
 
-\SSsect
-
-\SSsect
+\SSsect[!] Модулярность. Если заменить \( f \) на полином \( h \in \xR[T] \) , такой, что
+\( g(t) = 0 \Rightarrow h(t) = f(t) \) , то значения \( \delta(t) \) не изменяться в точках
+\( \{ t \in \xR : g(t) = 0 \} \) . Поэтому
+\[ \left( \frac{h}{g} \right)^b_a = \left( \frac{f}{g} \right)^b_a \]
+В частности, это верно, если \( h=f-qg \) . Для доказательства см. картинку:
+\vspace
+\begin{tikzpicture}
+\draw[thick,->] (0,0) -- (6,0) node[anchor=north west] {\(t\)};    
+\end{tikzpicture}
 
 \vspace
 

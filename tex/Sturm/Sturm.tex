@@ -88,30 +88,58 @@
 \SSsect[!!] Главная теорема:
 \[ \varphi(b) - \varphi(a) = \sum_{ a<t<b \enspace \delta(t) \neq 0 } \delta(t) \]
 
+\def\Symbol#1#2{ \left( \frac{#1}{#2} \right)^b_a }
+
 \SSsect[def] Определим символ
-\[ \left( \frac{f}{g} \right)^b_a := \sum_{ a<t<b \enspace g(t)=0 } \delta(t) \]
+\[ \Symbol{f}{g} := \sum_{ a<t<b \enspace g(t)=0 } \delta(t) \]
 
 \SSsect \( \varphi \) и \( \delta \) для пар \( (f,g) \) и \( (g,f) \) одинаковы.
 
 \SSsect[!!] Закон взаимности:
-\[ \left( \frac{f}{g} \right)^b_a + \left( \frac{g}{f} \right)^b_a = \varphi(b)-\varphi(a) \]
+\[ \Symbol{f}{g} + \Symbol{g}{f} = \varphi(b)-\varphi(a) \]
 
 \SSsect Если заменить \( f \) на \( -f \) , то \( \varphi \) превратиться в \( 1-\varphi \) , а \( \delta \) в \( -\delta \) .
 
 \SSsect[!] Нечётность:
-\[ \left( \frac{-f}{g} \right)^b_a = - \left( \frac{f}{g} \right)^b_a \]
+\[ \Symbol{-f}{g} = - \Symbol{f}{g} \]
 
 \SSsect[!] Модулярность. Если заменить \( f \) на полином \( h \in \xR[T] \) , такой, что
 \( g(t) = 0 \Rightarrow h(t) = f(t) \) , то значения \( \delta(t) \) не изменяться в точках
-\( \{ t \in \xR : g(t) = 0 \} \) . Поэтому
-\[ \left( \frac{h}{g} \right)^b_a = \left( \frac{f}{g} \right)^b_a \]
+\( \SSet{ t\in \xR }{ g(t) = 0 } \) . Поэтому
+\[ \Symbol{h}{g} = \Symbol{f}{g} \]
 В частности, это верно, если \( h=f-qg \) . Для доказательства см. картинку:
 \vspace
 \begin{tikzpicture}
 \draw[thick,->] (0,0) -- (6,0) node[anchor=north west] {\(t\)};    
+\draw[fill,black] (2,0) circle [radius=0.1];
+\draw[fill,black] (2,1.5) circle [radius=0.1];
+\draw (1,-1) node[anchor=north west] {\(g\)} .. controls (1.5,-0.1) .. (5,1) ;
+\draw (1,0.5) node[anchor=north east] {\(f\)} .. controls (1.5,1.45) .. (5,2) ;
+\draw (1,1.5) node[anchor=south east] {\(h\)} .. controls (3,1.5) .. (5,-1) ;
 \end{tikzpicture}
 
+Пояснение, вблизи точки \( t \) значения \( f\) и \( h \) имеют одинаковый знак, поэтому две версии \( \varphi \) совпадают, а, значит, совпадают и две версии \( \delta \).
+
 \vspace
+
+\SSresume
+
+\SSsect 
+\[ \Symbol{f}{g} \in \xZ \]
+
+\SSsect
+\[ \Symbol{-f}{g} = - \Symbol{f}{g} \]
+
+\SSsect
+\[ g(t) = 0 \Rightarrow h(t) = f(t) \]
+\[ \Downarrow \]
+\[ \Symbol{h}{g} = \Symbol{f}{g} \]
+
+\SSsect
+\[ \Symbol{f}{g} + \Symbol{g}{f} = \varphi(b)-\varphi(a) = \sigma(f(b),g(b)) - \sigma(f(a),g(a)) \]
+
+\SSsect Если \( g \) не имеет вещественных корней, то
+\[ \Symbol{f}{g} = 0 \]
 
 \SSbullet
 

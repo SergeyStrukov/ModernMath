@@ -37,6 +37,8 @@
 
 \def\SSbullet{ \stepcounter{Nbullet} \centerline{\underline{ n.\arabic{Nbullet} }} }
 
+\def\SSresume{ \centerline{\underline{ Resume }} \setcounter{Nsect}{0} }
+
 \newcounter{Nsect}[Nbullet]
 
 \newcommand{\SSsect}[1][]{ \vspace \stepcounter{Nsect} \( \arabic{Nsect})^{#1} \) }

@@ -36,6 +36,8 @@
 
 \SSsect \( \sigma(x,y) = \sigma(y,x) \)
 
+\SSsect \( \sigma(x,y) = \sigma(sign(x),y) = \sigma(sign(x),sign(y)) \)
+
 \SSsect \( \sigma(-x,y) = 1 - \sigma(x,y) \)
 
 \SSsect[def] \( \sigma(x_1,\dots,x_n) \) , \( x_1,\dots,x_n \in \xR^* \) , \( n \geqslant 1 \)
@@ -108,7 +110,9 @@
 \( \SSet{ t\in \xR }{ g(t) = 0 } \) . Поэтому
 \[ \Symbol{h}{g} = \Symbol{f}{g} \]
 В частности, это верно, если \( h=f-qg \) . Для доказательства см. картинку:
+
 \vspace
+
 \begin{tikzpicture}
 \draw[thick,->] (0,0) -- (6,0) node[anchor=north west] {\(t\)};    
 \draw[fill,black] (2,0) circle [radius=0.1];
@@ -118,7 +122,7 @@
 \draw (1,1.5) node[anchor=south east] {\(h\)} .. controls (3,1.5) .. (5,-1) ;
 \end{tikzpicture}
 
-Пояснение, вблизи точки \( t \) значения \( f\) и \( h \) имеют одинаковый знак, поэтому две версии \( \varphi \) совпадают, а, значит, совпадают и две версии \( \delta \).
+Пояснение, вблизи точки \( t \) значения \( f\) и \( h \) имеют одинаковый знак, \( sign(f) = sign(h) \) , поэтому две версии \( \varphi \) совпадают, а, значит, совпадают и две версии \( \delta \).
 
 \vspace
 
@@ -186,6 +190,77 @@
 \vspace
 
 \SSbullet
+
+\begin{center}
+Пусть \( f \in \xR[T] \) --- полином без кратных корней
+
+\( a,b \in \xR \) , \( a<b \) ,
+
+\( a \) и \( b \) --- не корни \( f \) или \( f' \)
+\end{center}
+
+\SSsect \( (f,f')=1 \) , \( f \) и \( f' \) не имеют общих корней
+
+\SSsect[!]
+\[ \Symbol{f'}{f} = - \text{ число корней } f \text{ на } (a,b) \] 
+
+\SSproof
+
+\vspace
+Достаточно доказать, что \( f(t) = 0  \Rightarrow \delta(t) = -1 \) .
+
+Для доказательства см. следующие картинки:
+
+\vspace
+
+\begin{tikzpicture}
+    \draw[thick,->] (0,0) -- (6,0) node[anchor=north west] {\(t\)};    
+    \draw[fill,black] (2,0) circle [radius=0.1];
+    \draw[fill,black] (2,1.5) circle [radius=0.1];
+    \draw (1,-1) node[anchor=north west] {\(f\)} .. controls (1.5,-0.1) .. (5,1) ;
+    \draw (1,0.5) node[anchor=north east] {\(f'\)} .. controls (1.5,1.45) .. (5,2) ;
+\end{tikzpicture}
+
+\vspace
+
+\( \varphi(t+0) = 0 \) , \( \varphi(t-0) = 1 \) , \( \delta(t) = -1 \)
+
+\vspace
+
+\begin{tikzpicture}
+    \draw[thick,->] (0,0) -- (6,0) node[anchor=north west] {\(t\)};    
+    \draw[fill,black] (2,0) circle [radius=0.1];
+    \draw[fill,black] (2,-1.5) circle [radius=0.1];
+    \draw (1,1) node[anchor=north west] {\(f\)} .. controls (1.5,0.1) .. (5,-1) ;
+    \draw (1,-0.5) node[anchor=north east] {\(f'\)} .. controls (1.5,-1.45) .. (5,-2) ;
+\end{tikzpicture}
+
+\vspace
+
+\( \varphi(t+0) = 0 \) , \( \varphi(t-0) = 1 \) , \( \delta(t) = -1 \)
+
+\vspace
+
+Пояснение, \( sign(f(t+0)) = sign(f'(t)) \) , \( sign(f(t-0)) = - sign(f'(t)) \) .
+
+\SSendp
+
+\SSsect[!!] \underline{Теорема Штурма}
+
+\vspace
+
+Пусть \( f_0 = f \) , \( f_1=f' \) , \( \dots \) , \( f_n \) , \( n \geqslant 1 \) --- рад Штурма.
+Пусть члены ряда не обращаются в нуль в точках \( a \) и \( b \) .
+Тогда 
+\[ \text{ число корней } f \text{ на } (a,b) = \sigma(f_0(a),\dots,f_n(a)) - \sigma(f_0(b),\dots,f_n(b)) \]
+
+\SSproof
+
+\[ - \Symbol{f'}{f} = \Symbol{f}{f'} + \sigma(f(a),f'(a)) - \sigma(f(b),f'(b)) = \]
+
+\[ \sigma(f(a),f'(a)) + \sigma(f_1(a),\dots,f_n(a)) - \sigma(f(b),f'(b)) - \sigma(f_1(b),\dots,f_n(b)) \]
+
+\SSendp
 
 
 \end{document}

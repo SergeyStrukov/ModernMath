@@ -249,7 +249,7 @@
 
 \vspace
 
-Пусть \( f_0 = f \) , \( f_1=f' \) , \( \dots \) , \( f_n \) , \( n \geqslant 1 \) --- рад Штурма.
+Пусть \( f_0 = f \) , \( f_1=f' \) , \( \dots \) , \( f_n \) , \( n \geqslant 1 \) --- ряд Штурма.
 Пусть члены ряда не обращаются в нуль в точках \( a \) и \( b \) .
 Тогда 
 \[ \text{ число корней } f \text{ на } (a,b) = \sigma(f_0(a),\dots,f_n(a)) - \sigma(f_0(b),\dots,f_n(b)) \]
@@ -262,6 +262,28 @@
 
 \SSendp
 
+\SSsect Пусть \( g(t) = Gt^n+\dots \) --- полином, \( Gt^n \) --- его старший член.
+Тогда \( sign(g(a)) = sign(G)(-1)^n \) для \( a \rightarrow -\infty \) ,
+\( sign(g(b)) = sign(G) \) для \( b \rightarrow +\infty \) . 
+Будем писать \( sign(g(-\infty)) := sign(G)(-1)^n \) и \( sign(g(+\infty)) := sign(G) \) .
+
+\SSsect \underline{Следствие}
+
+\vspace
+
+Пусть \( f_0 = f \) , \( f_1=f' \) , \( \dots \) , \( f_n \) , \( n \geqslant 1 \) --- ряд Штурма.
+
+Тогда 
+\[ \text{ число корней } f = \sigma(sign(f_0(-\infty)),\dots,sign(f_n(-\infty))) - \sigma(sign(f_0(+\infty)),\dots,sign(f_n(+\infty))) \]
+
+\SSsect \underline{Теорема Штурма\(+\)}
+
+\vspace
+
+Пусть \( f_0 = f \) , \( f_1=f' \) , \( \dots \) , \( f_n \) , \( n \geqslant 1 \) --- ряд Штурма. Пусть \( f \) не обращается в нуль в точках \( a \) и \( b \) .
+Тогда 
+\[ \text{ число корней } f \text{ на } (a,b) = \sigma(f_0(a),\dots,f_n(a)) - \sigma(f_0(b),\dots,f_n(b)) \]
+При этом если один из аргументов \( \sigma \) равен нулю, его надо просто вычеркнуть.
 
 \end{document}
 

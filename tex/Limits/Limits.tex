@@ -228,11 +228,27 @@ TODO picture
 
 \[ x = \lim_{F} f \Leftrightarrow pr_F \mbox{~изоморфизм} \Rightarrow \Gamma_x \mbox{~недискретно} \]
 
-\SSsect[def] \( x \in X \) называется предельной точкой \( f \) относительно \( F \) , если \( F_x \) недискретно. Множество предельных точек \( f \) относительно \( F \) будем обозначать \( Lim_F(f) \) .
+\SSsect[def] \( x \in X \) называется предельной точкой \( f \) относительно \( F \) , если \( \Gamma_x \) недискретно. Множество предельных точек \( f \) относительно \( F \) будем обозначать \( Lim_F(f) \) .
 
-\SSsect 
+\SSsect \( x = \lim_{F} f \Rightarrow x \in Lim_F(f) \) .
 
-\( g \mathrm{g} h \mathrm{h}^0 \mathrm{h}^1 \)
+\SSsect Имеют место следующие эквивалентности:
+
+\begin{itemize}[label=]
+    \item \( \Gamma_x \) дискретно \( \Leftrightarrow \)
+    \item \( (\infty_F,x) \) открыто в \( \Gamma_x \) \( \Leftrightarrow \) 
+    \item \( \Gamma \) замкнуто в \( \Gamma_x \) \( \Leftrightarrow \)
+    \item \( \overline{\Gamma} \bigcap \Gamma_x = \Gamma \)  \( \Leftrightarrow \)
+    \item \( (\infty_F,x) \notin \overline{\Gamma} \)  \( \Leftrightarrow \)
+    \item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \times U \bigcap \Gamma = \varnothing \) \( \Leftrightarrow \)
+    \item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \bigcap f^{-1}(U) = \varnothing \)  
+\end{itemize}
+
+\SSsect \( \overline{\Gamma} \bigcap \infty_F \times X = \infty_F \times Lim_F(f) \) .
+
+\( Lim_F(f) \) замкнуто в \( X \) .
+
+\SSsect \( Lim_F(f) = \bigcap_{\infty_F \in V} \overline{f(V^\circ)} \)
 
 \pagebreak
 

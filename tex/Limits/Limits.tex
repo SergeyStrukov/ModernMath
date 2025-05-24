@@ -52,14 +52,14 @@
 \SSDiag[M]
 { 
     F^\circ & F & \infty_F & g(\infty_F) = x \\
-    & X \\
+            & X \\
 };
 \path
-(M-1-1) edge [->] node [above] {\(\subset\)} (M-1-2)
-(M-1-1) edge [->] node [left] {\(f\)} (M-2-2)
-(M-1-2) edge [->,dashed] node [right] {\(g\)} (M-2-2)
+(M-1-1) edge [->] node [above] {\( \subset \)} (M-1-2)
+(M-1-1) edge [->] node [left] {\( f \)} (M-2-2)
+(M-1-2) edge [->,dashed] node [right] {\( g \)} (M-2-2)
 (M-1-3) edge [->] (M-1-2) 
-(M-1-3) edge [->] node [right] {\(x\)} (M-2-2) ;
+(M-1-3) edge [->] node [right] {\( x \)} (M-2-2) ;
 \end{tikzpicture}
 
 \SSsect Пусть \( F \) --- фильтр, \( p: X \rightarrow Y \) --- непрерывное отображение топологических пространств, \( f: F^\circ \rightarrow X \) --- отображение.
@@ -213,42 +213,69 @@
 
 \( X \) --- топологическое пространство,
 
-\( f: F^\circ \rightarrow X  \) .
+\( f: F^\circ \rightarrow X \) .
 \end{center}
 
 \SSsect Пусть \( \Gamma := \{~ (t,f(t)) ~|~ t \in F^\circ ~\} \subset F \times X \) --- график \( f \) .
 
 Пусть \( x \in X \) , \( \Gamma_x := \Gamma \cup \{ (\infty_F,x) \} \subset F \times X \) --- график продолжения \( f \) , такого, что \( \infty_F \mapsto x \) .
-
+\vspace
 TODO picture
 
-\SSsect 
+\SSsect Рассмотрим следующую диаграмму:
 
-TODO picture
+\begin{tikzpicture}
+\SSDiag[M]
+{ 
+   \Gamma_x & X \\
+   F \\
+};
+\path
+(M-1-1) edge [->] node [above] {\( pr_X \)} (M-1-2)
+(M-1-1) edge [->] node [right] {\( pr_F \) биективно} (M-2-1) ;
+\end{tikzpicture}
 
+Тогда
 \[ x = \lim_{F} f \Leftrightarrow pr_F \mbox{~изоморфизм} \Rightarrow \Gamma_x \mbox{~недискретно} \]
 
-\SSsect[def] \( x \in X \) называется предельной точкой \( f \) относительно \( F \) , если \( \Gamma_x \) недискретно. Множество предельных точек \( f \) относительно \( F \) будем обозначать \( Lim_F(f) \) .
+\SSsect[def] \( x \in X \) называется предельной точкой \( f \) относительно \( F \) , если \( \Gamma_x \) недискретно. Множество предельных точек \( f \) относительно \( F \) будем обозначать \( \underset{F}{Lim}(f) \) .
 
-\SSsect \( x = \lim_{F} f \Rightarrow x \in Lim_F(f) \) .
+\SSsect \( x = \lim\limits_{F} f \Rightarrow x \in \underset{F}{Lim}(f) \) .
 
 \SSsect Имеют место следующие эквивалентности:
 
 \begin{itemize}[label=]
-    \item \( \Gamma_x \) дискретно \( \Leftrightarrow \)
-    \item \( (\infty_F,x) \) открыто в \( \Gamma_x \) \( \Leftrightarrow \) 
-    \item \( \Gamma \) замкнуто в \( \Gamma_x \) \( \Leftrightarrow \)
-    \item \( \overline{\Gamma} \bigcap \Gamma_x = \Gamma \)  \( \Leftrightarrow \)
-    \item \( (\infty_F,x) \notin \overline{\Gamma} \)  \( \Leftrightarrow \)
-    \item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \times U \bigcap \Gamma = \varnothing \) \( \Leftrightarrow \)
-    \item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \bigcap f^{-1}(U) = \varnothing \)  
+\item \( \Gamma_x \) дискретно \( \Leftrightarrow \)
+\item \( (\infty_F,x) \) открыто в \( \Gamma_x \) \( \Leftrightarrow \) 
+\item \( \Gamma \) замкнуто в \( \Gamma_x \) \( \Leftrightarrow \)
+\item \( \overline{\Gamma} \bigcap \Gamma_x = \Gamma \)  \( \Leftrightarrow \)
+\item \( (\infty_F,x) \notin \overline{\Gamma} \)  \( \Leftrightarrow \)
+\item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \times U \bigcap \Gamma = \varnothing \) \( \Leftrightarrow \)
+\item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \bigcap f^{-1}(U) = \varnothing \)  
 \end{itemize}
 
-\SSsect \( \overline{\Gamma} \bigcap \infty_F \times X = \infty_F \times Lim_F(f) \) .
+\SSsect \( \overline{\Gamma} \bigcap \infty_F \times X = \infty_F \times \underset{F}{Lim}(f) \) .
+\( \underset{F}{Lim}(f) \) замкнуто в \( X \) .
 
-\( Lim_F(f) \) замкнуто в \( X \) .
+\SSsect \( \underset{F}{Lim}(f) = \bigcap\limits_{\infty_F \in V} \overline{f(V^\circ)} \)
 
-\SSsect \( Lim_F(f) = \bigcap_{\infty_F \in V} \overline{f(V^\circ)} \)
+\SSsect Пусть \( \tau : G \rightarrow F \) --- морфизм фильтров. Тогда \( \underset{G}{Lim}(f \circ \tau^\circ) \subset \underset{F}{Lim}(f) \) .
+
+\SSproof
+\vspace
+TODO picture
+\[ (\tau \times id_X)(\Gamma') \subset \Gamma \]
+\[ (\tau \times id_X)(\overline{\Gamma'}) \subset \overline{\Gamma} \]
+
+\SSendp
+
+\SSsect[!] \( x \in \underset{F}{Lim}(f) ~\Rightarrow~ \Gamma_x \) есть фильтр \( ~\Rightarrow~ \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x = \lim\limits_{F'} f ~\Rightarrow~ \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x \in \underset{F'}{Lim}(f) ~\Rightarrow~ x \in \underset{F}{Lim}(f) \) .
+
+\SSsect Пусть \( F \) --- \textbf{ультрафильтр}. Тогда \( \underset{F}{Lim}(f) = \lim\limits_{F} f \) .
+
+\SSsect Пусть \( X \) хаусдорфово. Тогда \( x = \lim\limits_{F} f ~\Rightarrow~ \underset{F}{Lim}(f) = \{x\} \) .
+
+\SSsect Пусть \( p : X \rightarrow Y \) --- непрерывное отображение. Тогда \( p(\underset{F}{Lim}(f)) \subset \underset{F}{Lim}(f \circ p) \) .
 
 \pagebreak
 

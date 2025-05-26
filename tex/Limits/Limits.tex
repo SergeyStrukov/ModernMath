@@ -254,17 +254,19 @@
 
 \SSsect \( x = \lim\limits_{F} f \Rightarrow x \in \underset{F}{Lim}(f) \) .
 
-\SSsect Имеют место следующие эквивалентности:
+\pagebreak
 
-\begin{itemize}[label=]
-\item \( \Gamma_x \) дискретно \( \Leftrightarrow \)
-\item \( (\infty_F,x) \) открыто в \( \Gamma_x \) \( \Leftrightarrow \) 
-\item \( \Gamma \) замкнуто в \( \Gamma_x \) \( \Leftrightarrow \)
-\item \( \overline{\Gamma} \bigcap \Gamma_x = \Gamma \)  \( \Leftrightarrow \)
-\item \( (\infty_F,x) \notin \overline{\Gamma} \)  \( \Leftrightarrow \)
-\item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \times U \bigcap \Gamma = \varnothing \) \( \Leftrightarrow \)
+\SSsect Cледующие утверждения эквивалентны:
+
+\begin{enumerate}[label={\alph*)}]
+\item \( \Gamma_x \) дискретно 
+\item \( (\infty_F,x) \) открыто в \( \Gamma_x \) 
+\item \( \Gamma \) замкнуто в \( \Gamma_x \) 
+\item \( \overline{\Gamma} \bigcap \Gamma_x = \Gamma \)  
+\item \( (\infty_F,x) \notin \overline{\Gamma} \)  
+\item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \times U \bigcap \Gamma = \varnothing \) 
 \item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \bigcap f^{-1}(U) = \varnothing \)  
-\end{itemize}
+\end{enumerate}
 
 \SSsect \( \overline{\Gamma} \bigcap \infty_F \times X = \infty_F \times \underset{F}{Lim}(f) \) .
 \( \underset{F}{Lim}(f) \) замкнуто в \( X \) .
@@ -300,7 +302,15 @@
 
 \SSendp
 
-\SSsect[!] \( x \in \underset{F}{Lim}(f) ~\Rightarrow~ \Gamma_x \) есть фильтр \( ~\Rightarrow~ \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x = \lim\limits_{F'} f ~\Rightarrow~ \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x \in \underset{F'}{Lim}(f) ~\Rightarrow~ x \in \underset{F}{Lim}(f) \) .
+\pagebreak
+
+\SSsect[!] Следующие утверждения равносильны:
+\begin{enumerate}[label={\alph*)}]
+\item \( x \in \underset{F}{Lim}(f) \)
+\item \( \Gamma_x \) есть фильтр
+\item \( \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x = \lim\limits_{F'} f \)
+\item \( \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x \in \underset{F'}{Lim}(f) \)
+\end{enumerate}
 
 \SSsect Пусть \( F \) --- \textbf{ультрафильтр}. Тогда \( \underset{F}{Lim}(f) = \lim\limits_{F} f \) .
 
@@ -311,6 +321,8 @@
 \pagebreak
 
 \SSbullet 
+
+\SSsect[def] Пусть \( F \) --- фильтр. \textit{Базой} \( F \) называется базис окрестностей в \( \infty_F \) . Т.е. это семейство \( \cB \), такое, что \( \forall~U \in \cB \) есть окрестность \( \infty_F \) и \( \forall~V \) , окрестности \( \infty_F \), \( \exists~V \in \cB \) , такая, что \( V \subset  U \) .
 
 \pagebreak
 

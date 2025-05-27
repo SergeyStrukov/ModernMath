@@ -324,6 +324,36 @@
 
 \SSsect[def] Пусть \( F \) --- фильтр. \textit{Базой} \( F \) называется базис окрестностей в \( \infty_F \) . Т.е. это семейство \( \cB \), такое, что \( \forall~U \in \cB \) есть окрестность \( \infty_F \) и \( \forall~V \) , окрестности \( \infty_F \), \( \exists~V \in \cB \) , такая, что \( V \subset  U \) .
 
+\SSsect Пусть \( F \) --- фильтр, \( X \) --- топологическое пространство, \( f: F \rightarrow X \) --- функция. Тогда \( f \) непрерывна \( \Leftrightarrow f \) непрерывна в точке \( \infty_F \) .
+
+\SSsect Пусть \( F \) --- фильтр, \( \cB \) --- база \( F \) , \( X \) --- топологическое пространство, \( f: F \rightarrow X \) --- функция, \( f(\infty_F)=x \) . Тогда \( f \) непрерывна \( \Leftrightarrow \forall~x \in U \) окрестности \( \exists~V \in \cB \) , такая, что \( f(V) \subset U \).
+
+\SSsect[!] Пусть \( X \) --- топологическое пространство, \( A \subset X \) , \( x \in \overline{A} \) . Тогда \( \exists \) фильтр \( F \) и функция \( f: F^\circ \rightarrow X \) , такие, что \( x = \lim\limits_{F} f \) .
+
+\SSproof
+
+Положим \( F = A \bigsqcup \{\infty\} \) . Топологию на \( F \) зададим следующим базисом:
+\begin{itemize}[label=]
+    \item \( \{a\} \) в точке \( a \in A \) ,
+    \item \( \{~( U \bigcap A ) \cup \{\infty\} ~|~ x \in U \) --- окрестность \( ~\} \) , в точке \( \infty \) .
+\end{itemize}
+
+Тогда \( F \) --- фильтр, \( \infty_F=\infty \) , \( F^\circ=A \) . Определим \( f:=id_A \) , \( g: F \rightarrow X \) --- продолжение \( f \) , такое, что \( g(\infty)=x \) . Тогда для любой окрестности \( x \in U \) будем иметь \( g(( U \bigcap A ) \cup \{\infty\}) \subset U \) , значит, \( g \) непрерывна, поэтому \( x = \lim\limits_{F} f \) .
+
+\SSendp
+
+\SSsect
+
+\SSsect
+
+\SSsect
+
+\SSsect
+
+\SSsect
+
+\SSsect
+
 \pagebreak
 
 \SSbullet 

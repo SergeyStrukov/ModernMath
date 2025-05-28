@@ -334,21 +334,55 @@
 
 Положим \( F = A \bigsqcup \{\infty\} \) . Топологию на \( F \) зададим следующим базисом:
 \begin{itemize}[label=]
-    \item \( \{a\} \) в точке \( a \in A \) ,
-    \item \( \{~( U \bigcap A ) \cup \{\infty\} ~|~ x \in U \) --- окрестность \( ~\} \) , в точке \( \infty \) .
+\item \( \{a\} \) в точке \( a \in A \) ,
+\item \( \{~( U \bigcap A ) \cup \{\infty\} ~|~ x \in U \) --- окрестность \( ~\} \) , в точке \( \infty \) .
 \end{itemize}
 
 Тогда \( F \) --- фильтр, \( \infty_F=\infty \) , \( F^\circ=A \) . Определим \( f:=id_A \) , \( g: F \rightarrow X \) --- продолжение \( f \) , такое, что \( g(\infty)=x \) . Тогда для любой окрестности \( x \in U \) будем иметь \( g(( U \bigcap A ) \cup \{\infty\}) \subset U \) , значит, \( g \) непрерывна, поэтому \( x = \lim\limits_{F} f \) .
 
 \SSendp
 
-\SSsect
+\SSsect[def] \( (\Lambda,\rightarrow) \) --- направленное множество, если:
+\begin{itemize}[label=]
+\item \( \Lambda \) --- непустое множество,   
+\item \( \rightarrow \) --- отношение на \( \Lambda \) , удовлетворяющее следующим условиям:
+\begin{enumerate}[label={\alph*)}]
+\item \( \lambda \rightarrow \lambda \) (рефлексивность),
+\item \( \lambda \rightarrow \mu ~\&~ \mu \rightarrow \nu \Rightarrow \lambda \rightarrow \nu \) (транзитивность),
+\item \( \forall~\lambda,\mu ~\exists~ \nu \) , такое, что \( \lambda \rightarrow \nu ~\&~ \mu \rightarrow \nu \)
+\end{enumerate}
+\end{itemize}
 
-\SSsect
+\( \Lambda \) можно рассматривать как малую категорию, где \( \Lambda \) есть множество объектов,
 
-\SSsect
+\[ Hom(\lambda,\mu)=
+   \begin{cases}
+   \{\varnothing\}, & \text{если} ~\lambda \rightarrow \mu \\
+   \varnothing    , & \text{в противном случае}
+   \end{cases}
+\]
 
-\SSsect
+\pagebreak
+
+\SSsect[def] Пусть \( \Lambda \) --- направленное множество.
+\[ \Lambda \rightarrow \infty ~:=~ \Lambda \sqcup \{\infty\} \]
+Введём на \( \Lambda \rightarrow \infty \) топологию со следующим базисом:
+\begin{itemize}[label=]
+    \item \( \{\lambda\} \) в точке \( \lambda \in \Lambda \) ,
+    \item \( \{~\{~\mu~|~\lambda\rightarrow\mu~\} \cup \{\infty\} ~|~ \lambda \in \Lambda ~\} \) , в точке \( \infty \) .
+\end{itemize}
+Тогда \( \Lambda \rightarrow \infty \) есть фильтр, \( (\Lambda \rightarrow \infty)^\circ=\Lambda \) . Самый распространённый пример --- \( \xN \rightarrow \infty \) .
+
+\SSsect Пусть \( \Lambda \) и \( \Lambda' \) --- направленные множества, \( \tau: \Lambda \rightarrow \Lambda' \) --- монотонное отображение. Т.е. \( \lambda \rightarrow \mu \Rightarrow \tau(\lambda) \rightarrow \tau(\mu) \) . \( \tau \) можно рассматривать как функтор, если интерпретировать \( \Lambda \) и \( \Lambda' \) как малые категории.
+Тогда \( \tau \) продолжается до морфизма фильтров \( (\Lambda \rightarrow \infty) \rightarrow (\Lambda' \rightarrow \infty) \) (всегда однозначно) \( \Leftrightarrow  \forall~\lambda' \in \Lambda' ~\exists~\lambda \in \Lambda ~,~ \lambda' \rightarrow \tau(\lambda) \) .
+
+\SSproof
+
+\( \tau \) продолжается до морфизма фильтров \( \Leftrightarrow \lim\limits_{\Lambda \rightarrow \infty} \tau = \infty \) . Это значит, что \( \forall~\lambda' \in \Lambda' ~\exists~\lambda \in \Lambda ~,~ \lambda \rightarrow \mu \Rightarrow \lambda' \rightarrow \tau(\mu) \) . В частности, \( \lambda' \rightarrow \tau(\lambda) \) . Наоборот, пусть \( \lambda' \rightarrow \tau(\lambda) \) . Тогда \( \lambda \rightarrow \mu \Rightarrow \tau(\lambda) \rightarrow \tau(\mu) \Rightarrow \lambda' \rightarrow \tau(\mu) \) .
+
+\SSendp
+
+\SSsect Пусть \( \Lambda \) и \( \Lambda' \) --- направленные множества. Тогда \( \Sigma := \Lambda \times \Lambda' \) со следующим отношением порядка: \( (\lambda,\lambda') \rightarrow (\mu,\mu') \Leftrightarrow \lambda \rightarrow \mu ~\&~  \lambda' \rightarrow \mu' \) , есть направленное множество. При этом проекции \( \Sigma \rightarrow \Lambda \) и \( \Sigma \rightarrow \Lambda' \) монотонны и продолжаются до морфизмов фильтров \( (\Sigma \rightarrow \infty) \rightarrow (\Lambda \rightarrow \infty) \) и \( (\Sigma \rightarrow \infty) \rightarrow (\Lambda' \rightarrow \infty) \) .
 
 \SSsect
 

@@ -384,13 +384,49 @@
 
 \SSsect Пусть \( \Lambda \) и \( \Lambda' \) --- направленные множества. Тогда \( \Sigma := \Lambda \times \Lambda' \) со следующим отношением порядка: \( (\lambda,\lambda') \rightarrow (\mu,\mu') \Leftrightarrow \lambda \rightarrow \mu ~\&~  \lambda' \rightarrow \mu' \) , есть направленное множество. При этом проекции \( \Sigma \rightarrow \Lambda \) и \( \Sigma \rightarrow \Lambda' \) монотонны и продолжаются до морфизмов фильтров \( (\Sigma \rightarrow \infty) \rightarrow (\Lambda \rightarrow \infty) \) и \( (\Sigma \rightarrow \infty) \rightarrow (\Lambda' \rightarrow \infty) \) .
 
-\SSsect
+\SSsect Пусть \( \Lambda \) --- направленное множество, \( \lambda_{max} \) --- наибольший элемент \( \Lambda \) , т.е. \( \forall~\lambda \in \Lambda~ \lambda \rightarrow \lambda_{max} \) . Это равносильно тому, что \( \lambda_{max} \) --- максимальный элемент \( \Lambda \) , т.е. \( \forall~\lambda \in \Lambda~ \lambda_{max} \rightarrow \lambda \Rightarrow \lambda \rightarrow \lambda_{max} \) .
+Тогда \( \forall~ f:\Lambda \rightarrow X \) , где \( X \) --- топологическое пространство,
+\[ f(\lambda_{max}) = \lim\limits_{\Lambda \rightarrow \infty} f \]
 
-\SSsect
+\SSsect Пусть \( \Lambda \) --- направленное множество, \( F \) --- фильтр, \( \tau:\Lambda \rightarrow F^{\circ} \) --- отображение. Тогда \( \tau \) продолжается до морфизма фильтров \( (\Lambda \rightarrow \infty) \rightarrow F \) (всегда однозначно) \( \Leftrightarrow \forall~ \infty_F \in U \) окрестности \( \exists~\lambda \in \Lambda ~\forall~\lambda \rightarrow \mu ~,~ \tau(\mu) \in U \) .
 
 \pagebreak
 
 \SSbullet 
+\begin{center}
+    \( X \) --- топологическое пространство
+\end{center}
+
+\SSsect Следующие утверждения равносильны:
+\begin{enumerate}[label={\alph*)}]
+\item \( X \) компактно,
+\item \( \forall~ Y ~ pr_Y: Y \times X \rightarrow Y \) замкнуто,
+\item \( \forall \) фильтра \( F \) и \( f:F^{\circ} \rightarrow X ~,~ \underset{F}{Lim}(f) \neq \varnothing \) ,
+\item \( \forall \) фильтра \( F \) и \( f:F^{\circ} \rightarrow X ~\exists \) более тонкий фильтр \( F' \) , такой, что существует \( \lim\limits_{F'} f \) ,
+\item \( \forall \) \textbf{ультрафильтра} \( F \) и \( f:F^{\circ} \rightarrow X ~\exists~ \lim\limits_{F} f \)
+\end{enumerate}
+
+\SSproof
+
+\underline{a) \( \Rightarrow \) b)}
+
+TODO
+
+
+\underline{b) \( \Rightarrow \) c)}
+
+TODO
+
+\underline{c) \( \Rightarrow \) a)}
+
+TODO
+
+Импликации \underline{c) \( \Rightarrow \) d) \( \Rightarrow \) e) \( \Rightarrow \) c)} тривиальны.
+
+\SSendp
+
+\SSsect[!!!] (Теорема Тихонова о произведениях).
+Если \( \{X_i\}_{i \in I} \) --- семейство компактных пространств, то их произведение \( \underset{i \in I}{\prod} X_i \) тоже компактно.
 
 \pagebreak
 

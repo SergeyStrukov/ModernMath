@@ -397,7 +397,7 @@
     \( X \) --- топологическое пространство
 \end{center}
 
-\SSsect Следующие утверждения равносильны:
+\SSsect[!] Следующие утверждения равносильны:
 \begin{enumerate}[label={\alph*)}]
 \item \( X \) компактно,
 \item \( \forall~ Y ~ pr_Y: Y \times X \rightarrow Y \) замкнуто,
@@ -473,5 +473,45 @@
 \pagebreak
 
 \SSbullet 
+
+\SSsect Пусть \( F \) --- фильтр. Тогда \( F \) есть ультрафильтр тогда, и только тогда, когда для любого разбиения \( F^{\circ} = A \bigsqcup B \) верно, что \( A \bigcup \{\infty_F\} \) или \( B \bigcup \{\infty_F\} \) открыты (но не оба вместе).
+
+\SSproof
+\vspace
+TODO
+\vspace
+\SSendp
+
+\SSsect Пусть \( X \) --- топологическое пространство, \( A \subset X \) , \( x \in \overline{A} \) . Пусть \( X \) обладает счётным базисом окрестностей в точке \( x \) . Тогда \( \exists~f:\xN \rightarrow A \) , такая, что \( x = \lim\limits_{\xN \rightarrow \infty} f \) .
+
+\SSproof
+
+Пусть \( \{U_n\}_{n \in \xN} \) --- убывающий базис окрестностей в точке \( x \) . Тогда \( \forall~n \in \xN~U_n\bigcap A \neq \varnothing \) . Выберем для всех \( n \in \xN \) точку \( f(n) \in U_n\bigcap A \) . Тогда \( f:\xN \rightarrow A \) . Далее, \( f(k) \in U_n \) , если \( k \geqslant n \) . Т.е. \( f(\{~k \in \xN~|~k \geqslant n~\}) \subset U_n \) . Значит, \( x = \lim\limits_{\xN \rightarrow \infty} f \) .
+
+\SSendp
+
+\SSsect Пусть \( F \) --- фильтр со счётной базой фильтра. Тогда существует морфизм фильтров \( (\xN \rightarrow \infty) \rightarrow F \) .
+
+\SSproof
+
+\( \infty_F \in \overline{F^{\circ}} \)
+
+\SSendp
+
+\SSsect Пусть \( F \) --- фильтр со счётной базой фильтра. Пусть \( A \subset F \) не замкнуто. Тогда существует морфизм фильтров \( \tau: (\xN \rightarrow \infty) \rightarrow F \) , такой, что \( \tau^{-1}(A) = \xN \) .
+
+\SSproof
+
+Достаточно заметить, что \( \infty_F \notin A \) и \( A \bigcup \{\infty_F\} \) --- подфильтр \( F \).
+
+\SSendp
+
+\SSsect Пусть \( F \) --- фильтр со счётной базой фильтра. Пусть \( X \) --- топологическое пространство, \( f:F^{\circ} \rightarrow X \) , \( x \in X \) . Пусть для любого морфизма фильтров \( \tau: (\xN \rightarrow \infty) \rightarrow F \) верно, что \( x =  \lim\limits_{\xN \rightarrow \infty} f \circ \tau \) . Тогда \( x =  \lim\limits_{F} f \) .
+
+\SSproof
+
+TODO
+
+\SSendp
 
 \end{document}

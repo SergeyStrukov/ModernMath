@@ -259,13 +259,13 @@
 \SSsect Cледующие утверждения эквивалентны:
 
 \begin{enumerate}[label={\alph*)}]
-\item \( \Gamma_x \) дискретно 
-\item \( (\infty_F,x) \) открыто в \( \Gamma_x \) 
-\item \( \Gamma \) замкнуто в \( \Gamma_x \) 
-\item \( \overline{\Gamma} \bigcap \Gamma_x = \Gamma \)  
-\item \( (\infty_F,x) \notin \overline{\Gamma} \)  
-\item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \times U \bigcap \Gamma = \varnothing \) 
-\item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \bigcap f^{-1}(U) = \varnothing \)  
+\item \( \Gamma_x \) дискретно, 
+\item \( (\infty_F,x) \) открыто в \( \Gamma_x \) ,
+\item \( \Gamma \) замкнуто в \( \Gamma_x \) ,
+\item \( \overline{\Gamma} \bigcap \Gamma_x = \Gamma \) , 
+\item \( (\infty_F,x) \notin \overline{\Gamma} \) , 
+\item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \times U \bigcap \Gamma = \varnothing \) ,
+\item \( \exists \) окрестности \( \infty_F \in V, x \in U\) , такие, что \( V \bigcap f^{-1}(U) = \varnothing \) . 
 \end{enumerate}
 
 \SSsect \( \overline{\Gamma} \bigcap \infty_F \times X = \infty_F \times \underset{F}{Lim}(f) \) .
@@ -306,10 +306,10 @@
 
 \SSsect[!] Следующие утверждения равносильны:
 \begin{enumerate}[label={\alph*)}]
-\item \( x \in \underset{F}{Lim}(f) \)
-\item \( \Gamma_x \) есть фильтр
-\item \( \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x = \lim\limits_{F'} f \)
-\item \( \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x \in \underset{F'}{Lim}(f) \)
+\item \( x \in \underset{F}{Lim}(f) \) ,
+\item \( \Gamma_x \) есть фильтр,
+\item \( \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x = \lim\limits_{F'} f \) ,
+\item \( \exists F' \) --- более тонкий фильтр, чем \( F \) , такой, что \( x \in \underset{F'}{Lim}(f) \) .
 \end{enumerate}
 
 \SSsect Пусть \( F \) --- \textbf{ультрафильтр}. Тогда \( \underset{F}{Lim}(f) = \lim\limits_{F} f \) .
@@ -322,7 +322,17 @@
 
 \SSbullet 
 
-\SSsect[def] Пусть \( F \) --- фильтр. \textit{Базой} \( F \) называется базис окрестностей в \( \infty_F \) . Т.е. это семейство \( \cB \), такое, что \( \forall~U \in \cB \) есть окрестность \( \infty_F \) и \( \forall~V \) , окрестности \( \infty_F \), \( \exists~V \in \cB \) , такая, что \( V \subset  U \) .
+\SSsect[def] Пусть \( F \) --- фильтр. \textit{Базой} \( F \) называется базис окрестностей в \( \infty_F \) . Т.е. это семейство \( \cB \), такое, что \( \forall~V \in \cB \) есть окрестность \( \infty_F \) и \( \forall~U \) , окрестности \( \infty_F \), \( \exists~V \in \cB \) , такая, что \( V \subset  U \) .
+
+\SSsect База и бесконечная точка фильтра однозначно определяют топологию фильтра. 
+
+\SSsect Пусть \( F \) --- множество, \( \infty \in F \) --- точка, \( \cB \) --- семейство подмножеств \( F \) . Тогда \( \cB \) есть база некоторого фильтра с множеством точек \( F \) и \( \infty_F = \infty \) тогда и только тогда, когда 
+\begin{enumerate}[label={\alph*)}]
+\item \( \forall~U \in \cB \) , \( \infty \in U \) и \( U \neq \{\infty\} \) ,  
+\item \( \forall~U,V \in \cB \) , \( \exists~W \in \cB \) , такой, что \( W \subset U\bigcap V \) .
+\end{enumerate}
+
+\SSsect Пусть \( F \) --- множество, \( \cB \) есть база некоторого фильтра с множеством точек \( F \) . Пусть \( \infty \in \bigcap \cB \) . Тогда \( \cB \) есть база некоторого фильтра с множеством точек \( F \) и \( \infty_F = \infty \) .
 
 \SSsect Пусть \( F \) --- фильтр, \( X \) --- топологическое пространство, \( f: F \rightarrow X \) --- функция. Тогда \( f \) непрерывна \( \Leftrightarrow f \) непрерывна в точке \( \infty_F \) .
 
@@ -342,6 +352,8 @@
 
 \SSendp
 
+\pagebreak
+
 \SSsect[def] \( (\Lambda,\rightarrow) \) --- направленное множество, если:
 \begin{itemize}[label=]
 \item \( \Lambda \) --- непустое множество,   
@@ -349,7 +361,7 @@
 \begin{enumerate}[label={\alph*)}]
 \item \( \lambda \rightarrow \lambda \) (рефлексивность),
 \item \( \lambda \rightarrow \mu ~\&~ \mu \rightarrow \nu \Rightarrow \lambda \rightarrow \nu \) (транзитивность),
-\item \( \forall~\lambda,\mu ~\exists~ \nu \) , такое, что \( \lambda \rightarrow \nu ~\&~ \mu \rightarrow \nu \)
+\item \( \forall~\lambda,\mu ~\exists~ \nu \) , такое, что \( \lambda \rightarrow \nu ~\&~ \mu \rightarrow \nu \) .
 \end{enumerate}
 \end{itemize}
 
@@ -361,8 +373,6 @@
    \varnothing    , & \text{в противном случае}
    \end{cases}
 \]
-
-\pagebreak
 
 \SSsect[def] Пусть \( \Lambda \) --- направленное множество.
 \[ \Lambda \rightarrow \infty ~:=~ \Lambda \sqcup \{\infty\} \]

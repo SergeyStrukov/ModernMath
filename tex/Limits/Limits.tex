@@ -477,9 +477,13 @@
 \SSsect Пусть \( F \) --- фильтр. Тогда \( F \) есть ультрафильтр тогда, и только тогда, когда для любого разбиения \( F^{\circ} = A \bigsqcup B \) верно, что \( A \bigcup \{\infty_F\} \) или \( B \bigcup \{\infty_F\} \) открыты (но не оба вместе).
 
 \SSproof
-\vspace
-TODO
-\vspace
+
+Пусть \( F = (F,\cT) \) . Тогда \( F \) --- ультрафильтр \( \Leftrightarrow \forall~ \cT \subset \cS \) топологии \( \cS \neq \cT \Rightarrow \{\infty_F\} \in \cS \) . Т.е. пусть \( A \subset F \) , \( A \notin \cT \) , \( \cS \) -- топология с предбазой \( \cT \bigcup \{A\} \) . Тогда \( \{\infty_F\} \in \cS \) . Пусть \( \cB \) --- база, порождённая \( \cT \bigcup \{A\} \) , тогда \( \{\infty_F\} \in \cB \) . Т.е. \( \exists~U_1,...,U_n \in \cT \bigcup \{A\} \) , такие, что \( \{\infty_F\} = U_1\bigcap ... \bigcap U_n \) . Из этого вытекает, что \( \exists~U \in \cT \) , такое, что \( \{\infty_F\} = U \) или \( \{\infty_F\} = U \bigcap A \) . Первое невозможно, значит верно второе. Мы доказали, что \( F \) --- ультрафильтр \( \Leftrightarrow \forall~ A \subset F \) , \( A \notin \cT ~\exists~ U \in \cT \) , такое, что \( \{\infty_F\} = U \bigcap A \) .
+
+Пусть теперь \( F^{\circ} = A \bigsqcup B \) --- разбиение, причём \( A \bigcup \{\infty_F\} \) не открыто. Значит, \( \exists~ U \in \cT \) такое, что \( \{\infty_F\} = U \bigcap (A \bigcup \{\infty_F\}) \) . Поэтому \( (U \setminus \{\infty_F\}) \bigcap A = \varnothing \Rightarrow U \setminus \{\infty_F\} \subset B \) . Имеем, \( B \bigcup \{\infty_F\} = B \bigcup U \) открыто (потому что \( B \) открыто).
+
+Наоборот, пусть выполнено условие про разбиения. Пусть \( A \subset F \) , такое, что \( A \) не открыто. Тогда \( \infty_F \in A \) . Положим \( B = F \setminus A \) . Тогда, по условию, \( U = B \bigcup \{\infty_F\} \) открыто. Но \( U \bigcap A = \{\infty_F\} \) , что и требовалось.
+
 \SSendp
 
 \SSsect Пусть \( X \) --- топологическое пространство, \( A \subset X \) , \( x \in \overline{A} \) . Пусть \( X \) обладает счётным базисом окрестностей в точке \( x \) . Тогда \( \exists~f:\xN \rightarrow A \) , такая, что \( x = \lim\limits_{\xN \rightarrow \infty} f \) .
@@ -510,7 +514,7 @@ TODO
 
 \SSproof
 
-TODO
+Пусть \( g:F \rightarrow X \) --- продолжение \( f \) , такое, что \( g(\infty_F)=x \) . Докажем, что \( g \) непрерывно. Пусть \( B \subset X \) замкнуто, а \( A = g^{-1}(B) \) не замкнуто. Тогда существует морфизм фильтров \( \tau: (\xN \rightarrow \infty) \rightarrow F \) , такой, что \( \tau^{-1}(A) = \xN \) . Имеем, \( (g \circ \tau)^{-1}(B) = \xN \) не замкнуто в \( \xN \rightarrow \infty \) , следовательно, \( g \circ \tau \) не непрерывно, поэтому неверно, что \( x =  \lim\limits_{\xN \rightarrow \infty} f \circ \tau \) . Противоречие.
 
 \SSendp
 
